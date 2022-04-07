@@ -23,6 +23,7 @@ func SetTenant() fiber.Handler {
 		c.Locals("tenant", tenant)
 		fmt.Println(tenant)
 		fmt.Println(tenantDomain)
+		// context.WithValue()
 		return c.Next()
 	}
 }

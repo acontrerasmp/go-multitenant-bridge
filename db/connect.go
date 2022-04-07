@@ -5,6 +5,7 @@ import (
 	"os"
 	"strconv"
 
+	// "gopato.io/models/public"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -12,6 +13,7 @@ import (
 
 func ConnectDb() {
 	var err error
+
 	Prod, _ = strconv.ParseBool(os.Getenv("PROD"))
 	var (
 		host     = os.Getenv("POSTGRES_HOST")
